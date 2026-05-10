@@ -78,7 +78,7 @@ class Approaches:
         # 🌀 Simulate the spiral walk one step at a time.
         # We keep moving in the current direction until we either
         # leave the matrix or hit a cell that was already visited.
-        self.result: List[int] = []
+        result: List[int] = []
 
         # 📏 Basic matrix dimensions and the total number of cells
         # we must collect before the traversal is complete.
@@ -102,7 +102,7 @@ class Approaches:
 
         while cellsVisited < totalCells:
             # 📥 Visit the current cell and record it in spiral order.
-            self.result.append(self._matrix[currentRow][currentCol])
+            result.append(self._matrix[currentRow][currentCol])
             visited[currentRow][currentCol] = True
             cellsVisited += 1
 
@@ -127,7 +127,7 @@ class Approaches:
             currentRow = nextRow
             currentCol = nextCol
 
-        return self.result
+        return result
 
     def _approach_03_layer_by_layer(self) -> List[int]:
         # 🌀 Process the matrix one full outer layer at a time.
