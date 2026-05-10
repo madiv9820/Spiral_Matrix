@@ -52,7 +52,7 @@ matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
 
 ### 📚 Approach Notes
 
-Detailed explanations for each implementation live in the [`docs/`](./docs/README.md) folder 📂
+Detailed explanations for each implementation live in the [`docs/`](./docs) folder 📂
 
 | Approach | Idea | Time | Extra Space | Notes |
 | --- | --- | --- | --- | --- |
