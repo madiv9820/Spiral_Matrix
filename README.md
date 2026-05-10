@@ -49,4 +49,14 @@ matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
 - **`n == matrix[i].length`**
 - **`1 <= m, n <= 10`**
 - **`-100 <= matrix[i][j] <= 100`**
+
+### 📚 Approach Notes
+
+Detailed explanations for each implementation live in the [`docs/`](./docs/README.md) folder 📂
+
+| Approach | Idea | Time | Extra Space | Notes |
+| --- | --- | --- | --- | --- |
+| [**🌀 Boundary Shrinking**](./docs/approach_01_boundary_shrinking.md) | Repeatedly traverse the current outer rectangle, then shrink the boundaries inward. | `O(m * n)` | `O(1)` | Great when you want a compact in-place traversal with no visited grid. |
+| [**🧭 Visited Matrix Simulation**](./docs/approach_02_visited_matrix_simulation.md) | Simulate spiral movement step by step and turn whenever the next cell is invalid or already visited. | `O(m * n)` | `O(m * n)` | Easiest to visualize because it behaves like an actual walk through the matrix. |
+| [**🎯 Layer By Layer**](./docs/approach_03_layer_by_layer.md) | Process one full ring at a time by collecting top, right, bottom, and left edges. | `O(m * n)` | `O(1)` | Clean and structured when you want to think in complete layers. |
 ---
