@@ -4,7 +4,7 @@ This file stores multiple traversal strategies so the main solution
 can switch between them without changing the public interface.
 """
 
-from typing import List
+from typing import List, Tuple
 
 class Approaches:
     def _approach_01_boundary_shrinking(self) -> List[int]:
@@ -94,7 +94,7 @@ class Approaches:
         # 🧭 Direction order for spiral traversal:
         # right -> down -> left -> up.
         currentDirection:   int             = 0
-        directions:         List[List[int]] = [(0, 1), (1, 0), (0, -1), (-1, 0)]  
+        directions:         List[Tuple[int]] = [(0, 1), (1, 0), (0, -1), (-1, 0)]  
 
         # 🎬 Start from the top-left corner of the matrix.
         currentRow: int = 0
