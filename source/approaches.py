@@ -82,10 +82,10 @@ class Approaches:
 
         # 📏 Basic matrix dimensions and the total number of cells
         # we must collect before the traversal is complete.
-        totalRows: int = len(self._matrix)
-        totalCols: int = len(self._matrix[0])
-        totalCells: int = totalRows * totalCols
-        cellsVisited: int = 0
+        totalRows:      int = len(self._matrix)
+        totalCols:      int = len(self._matrix[0])
+        totalCells:     int = totalRows * totalCols
+        cellsVisited:   int = 0
 
         # ✅ Track which cells have already been added to the answer
         # so we know exactly when to turn to the next direction.
@@ -93,8 +93,8 @@ class Approaches:
 
         # 🧭 Direction order for spiral traversal:
         # right -> down -> left -> up.
-        currentDirection: int = 0
-        directions: List[List[int]] = [(0, 1), (1, 0), (0, -1), (-1, 0)]  
+        currentDirection:   int             = 0
+        directions:         List[List[int]] = [(0, 1), (1, 0), (0, -1), (-1, 0)]  
 
         # 🎬 Start from the top-left corner of the matrix.
         currentRow: int = 0
@@ -136,10 +136,10 @@ class Approaches:
         result: List[int] = []
 
         # 📦 These boundaries describe the current layer we are traversing.
-        rowStart: int = 0
-        rowEnd: int = len(self._matrix) - 1
-        colStart: int = 0
-        colEnd: int = len(self._matrix[0]) - 1
+        rowStart:   int = 0
+        rowEnd:     int = len(self._matrix) - 1
+        colStart:   int = 0
+        colEnd:     int = len(self._matrix[0]) - 1
 
         while rowStart <= rowEnd and colStart <= colEnd:
             # ➡️ Traverse the top edge of the current layer.
@@ -165,9 +165,9 @@ class Approaches:
                     result.append(self._matrix[position][colStart])
             
             # 🎯 Shrink all four boundaries to move to the next inner layer.
-            rowStart += 1
-            rowEnd -= 1
-            colStart += 1
-            colEnd -= 1
+            rowStart    += 1
+            rowEnd      -= 1
+            colStart    += 1
+            colEnd      -= 1
 
         return result
